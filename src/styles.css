@@ -1,0 +1,164 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background-image: linear-gradient(
+            45deg,
+            rgb(4 126 81 / 80%),
+            rgb(226 26 201 / 56%)
+    ),
+    url("./assets/bg-cover.webp");
+}
+
+#root {
+    font-family: "Open Sans", sans-serif;
+    min-width: 50%;
+}
+
+#root > * {
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.69);
+    padding: 1rem 1rem;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer {
+    height: 10%;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+input {
+    outline: none;
+    border: 2px solid white;
+    border-radius: 4px;
+    width: 100%;
+    padding: 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+/*TODOS LIST*/
+.list {
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 10px;
+    list-style: none;
+    padding: 0;
+    background: white;
+}
+
+.list li {
+    transition: background-color 1s;
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    height: 3rem;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2.4rem;
+    padding: 0.5rem;
+    border-bottom: 0.1rem solid #aba8a8;
+}
+
+li.completed:before {
+    color:green;
+    content: '✓';
+}
+li:before {
+    content: '--';
+}
+/*
+buttons*/
+.btn {
+    border: 2px solid #038dff;
+    background: hsl(200, 100%, 50%, 0.3);
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+    min-width: 6rem;
+}
+
+.btn.btn-block {
+    width: 100%;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    background: hsl(200, 100%, 50%, 0.5);
+}
+
+.btn.active {
+    background: hsla(200, 100%, 50%, 0.99);
+}
+
+.filters {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+aside {
+    top:0;
+    left:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position:absolute;
+    float: left;
+    height: 100%;
+    min-width:4% ;
+    visibility: visible;
+}
+aside:before {
+    font-size: 3rem;
+    content: '≡';
+}
+aside:hover::before{
+    content: none;
+}
+aside *{
+    display: none;
+}
+aside:hover {
+    width: auto;
+}
+aside:hover *{
+    display: flex;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-profile {
+    display: flex;
+    flex-direction: column;
+}
